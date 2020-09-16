@@ -6,7 +6,7 @@ module.exports = (server, path) => {
       server.close();
       fs.unlinkSync(path);
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
 
     console.log('App is shutting down');
