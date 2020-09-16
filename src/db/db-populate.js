@@ -5,7 +5,7 @@ const generateFakeImgArray = () => {
   let arr = [];
   for (let i = 0; i < 1000; i++) {
     let fakeimgsrc = faker.image.image();
-    arr.push({ idNum: i, imageSrc: fakeimgsrc, tagList: '' });
+    arr.push({ idNum: i, imgSrc: fakeimgsrc, tagList: '' });
   }
   return arr;
 };
@@ -15,7 +15,7 @@ const populate = () => {
   const fakeArr = generateFakeImgArray();
 
   const insertCMD = db.prepare(
-    'INSERT OR REPLACE INTO phototags (idNum, imageSrc, tagList) VALUES (@idNum, @imageSrc, @tagList)'
+    'INSERT OR REPLACE INTO phototags (idNum, imageSrc, tagList) VALUES (@idNum, @imgSrc, @tagList)'
   );
 
   const insertMany = db.transaction((arrFake) => {
