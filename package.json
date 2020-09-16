@@ -20,10 +20,11 @@
   "homepage": "https://github.com/niman565/photo-q-web-app#readme",
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "faker": "^5.1.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "better-sqlite3": "^7.1.1",
+    "express": "^4.17.1",
+    "faker": "^5.1.0"
   }
 }
